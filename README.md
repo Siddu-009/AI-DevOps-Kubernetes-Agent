@@ -183,7 +183,10 @@ User clicks "Investigate Cluster"
 Frontend sends API request
                 │
                 ▼
-InsForge Backend
+FastAPI Backend
+      (Orchestration Layer)
+                │
+                ├── Authenticate User (InsForge)
                 │
                 ▼
 Investigation Layer
@@ -198,7 +201,8 @@ Investigation Layer
 AI Kubernetes Agent
                 │
                 ▼
-LLM Reasoning (OpenRouter via InsForge)
+LLM Reasoning
+      (OpenRouter via InsForge Key)
                 │
                 ▼
 Root Cause Analysis
@@ -206,11 +210,14 @@ Root Cause Analysis
                 ▼
 Suggested Fix Generated
                 │
-                ▼
-Save Investigation History
+                ├── Save Investigation History
+                │        (InsForge)
+                │
+                ├── Realtime Progress Updates
+                │        (InsForge)
                 │
                 ▼
-Realtime Update to UI
+Frontend Receives Result
                 │
                 ▼
 User sees Diagnosis
