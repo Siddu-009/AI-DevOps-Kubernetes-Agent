@@ -261,4 +261,7 @@ Update service selector
 Validate that the AI agent can troubleshoot real Kubernetes problems.
 ```
 
-Ready for a final demo in the video.
+Important:
+
+Make sure to display all the Kubernetes clusters on my local machine part of the kubeconfig file. User can click on the cluster and that cluster investigation is performed.
+
